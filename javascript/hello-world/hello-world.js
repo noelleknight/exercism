@@ -6,8 +6,14 @@
 
 var HelloWorld = function() {};
 
+
 HelloWorld.prototype.hello = function(input) {
-  return "Hello, World!"
+  if(input === ''){
+    return "Hello, World!";
+  }
+  if (typeof input === 'string'){
+    return "Hello, " + input + "!";
+  }
 //
 // YOUR CODE GOES HERE
 //

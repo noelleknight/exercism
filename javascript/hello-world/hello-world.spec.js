@@ -7,7 +7,7 @@ describe('Hello World', function() {
     expect(helloWorld.hello('')).toEqual('Hello, World!');
   });
 
-  xit('says hello to bob', function() {
+  it('says hello to bob', function() {
     expect(helloWorld.hello('Bob')).toEqual('Hello, Bob!');
   });
 
