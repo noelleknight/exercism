@@ -8,6 +8,8 @@ var HelloWorld = function() {};
 
 
 HelloWorld.prototype.hello = function(input) {
+  'use strict';
+  
   if(input === ''){
     return "Hello, World!";
   }
