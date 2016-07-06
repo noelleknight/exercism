@@ -9,16 +9,15 @@ var HelloWorld = function() {};
 
 HelloWorld.prototype.hello = function(input) {
   'use strict';
-  
-  if(input === ''){
+
+  var caseCheck = input.charAt(0);
+
+  if(input === '' | 'number'){
     return "Hello, World!";
   }
   if (typeof input === 'string'){
     return "Hello, " + input + "!";
   }
-//
-// YOUR CODE GOES HERE
-//
 };
 
 module.exports = HelloWorld;
