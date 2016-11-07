@@ -1,19 +1,20 @@
-var LeapYear = function() {};
 
-
-LeapYear.prototype.isLeap = function(input) {
-  'use strict';
-
-  if(input % 4 | 400 === 0)
-  {
-    return true;
-  }
-  else if (input % 100 === 0) {
-    return false;
-  }
-  else {
-    return false;
-  }
+var Year = function(year) {
+    this.year = year;
 };
 
-module.exports = LeapYear;
+Year.prototype.isLeap = function() {
+    var year = this.year;
+
+    if (year % 4 !== 0) {
+        return false;
+    } else if (year % 100 === 0 && year % 400 === 0) {
+        return true;
+    } else if (year % 4 === 0 && year % 100 === 0) {
+        return false;
+    } else {
+        return true;
+    }
+};
+
+module.exports = Year;
